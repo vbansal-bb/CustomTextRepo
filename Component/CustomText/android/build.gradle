@@ -1,0 +1,33 @@
+
+
+import com.android.Version
+
+def agpVersion = Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')[0].toInteger()
+def androidManifestPath = agpVersion >= 7 ? 'src/main/AndroidManifest.xml' : 'src/hasNamespace/AndroidManifest.xml'
+
+apply plugin: "com.android.library"
+
+android {
+
+    if (agpVersion >= 7) {
+        namespace "com.custom.reactnative.ui.text"
+    }
+
+    sourceSets {
+        main {
+        manifest.srcFile androidManifestPath
+            java.srcDirs += ['src/v77']
+        }
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+}
+
+dependencies {
+    implementation "com.facebook.react:react-native:+"
+}

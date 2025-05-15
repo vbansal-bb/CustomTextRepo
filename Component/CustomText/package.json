@@ -1,0 +1,16 @@
+{
+  "name": "CustomText",
+  "version": "1.0.0",
+  "description": "Custom Text UI component for React Native enables Data Leakage Prevention (DLP) within <Text /> UI component.",
+  "main": "index.js",
+  "bin": {
+    "set-text-config": "./scripts/add_text_widget.js"
+  },
+  "scripts": {
+    "install": "node ./scripts/add_text_widget.js",
+    "uninstall": "node ./scripts/cleanup_add_text_widget.js"
+  },
+  "keywords": [
+    "react-native"
+  ]
+}
