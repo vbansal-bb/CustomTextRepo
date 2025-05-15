@@ -48,7 +48,7 @@ Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _roo
 # using Yarn
 yarn android
 ```
-on New Architecture : Above will run the app on android emulator on new architecture but on load app is throwing an error -Attempt to create a native View AndroidTextCustom failed.
+on New Architecture : Above will run the app on android emulator on new architecture but on load app is throwing an error -Attempt to create a native View for AndroidVirtualTextCustom failed. please see the error screenshot at root
 
 On Old: when updating in gradle.properties `newArchEnabled=false` and rebuild then same app works fine with out any issue
 
